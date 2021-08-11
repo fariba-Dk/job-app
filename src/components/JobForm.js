@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import JobLists from './JobLists'
+import React, { useState, useRef, useEffect } from 'react';
 
 
 function JobForm(props) {
@@ -7,9 +6,9 @@ function JobForm(props) {
 
   const inputRef = useRef(null);
 
-  function useEffect(){
+  useEffect(() => {
     inputRef.current.focus();
-  };
+  });
 
   const handleChange = (e) => {
     setInput(e.target.value);
@@ -52,7 +51,7 @@ function JobForm(props) {
             className='job-input'
             ref={inputRef}
           />
-          <button onClick={handleSubmit} classNaFme='job-button'>
+          <button onClick={handleSubmit} className='job-button'>
             Add Your 💥 Job
           </button>
         </>

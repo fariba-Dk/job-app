@@ -17,10 +17,10 @@ const Job = ({ jobs, completeJob, removeJob, updateJob }) => {
     });
   };
   if (edit.id) {
-    return <JobForm edit={edit} onsubmit={submitUpdate} />;
+    return <JobForm edit={edit} onSubmit={submitUpdate} />;
   }
 
-  return jobs.map((job, index) => {
+  return jobs.map((job, index) => (
     <div className={job.isAdded ? 'job-row added' : 'job-row'} key={index}>
       <div key={job.id} onClick={() => completeJob(job.id)}>
         {job.text}
@@ -36,8 +36,8 @@ const Job = ({ jobs, completeJob, removeJob, updateJob }) => {
           className='edit-icon'
         />
       </div>
-    </div>;
-  });
+    </div>
+  ));
 };
 export default Job;
 // Failed to compile

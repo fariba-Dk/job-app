@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import JobForm from './JobForm';
-
-import Job from 'src / components / Job.js';
+import Job from './Job';
 
 function JobList() {
   const [jobs, setJobs] = useState([]);
@@ -50,7 +49,7 @@ function JobList() {
         jobs={jobs}
         completeJob={completeJob}
         removeJob={removeJob}
-        updatedJob={updateJob}
+        updateJob={updateJob}
       />
     </div>
   );
