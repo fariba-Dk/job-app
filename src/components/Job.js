@@ -32,7 +32,7 @@ const Job = ({ jobs, completeJob, removeJob, updateJob }) => {
           className='delete-icon'
         />
         <TiEdit
-          onClick={() => setEdit({ id: job.id, value: job.text })}
+          onClick={() => setEdit({ id: Job.id, value: job.text })}
           className='edit-icon'
         />
       </div>
